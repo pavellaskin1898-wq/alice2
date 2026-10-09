@@ -1,35 +1,100 @@
-# Gradle files
-.gradle/
+# Node.js / pnpm
+node_modules/
+dist/
 build/
-.kotlin/
+.cache/
+*.tsbuildinfo
+.pnpm-store/
 
-# Local configuration file (sdk path, etc)
+# Python (if any tools/scripts use it)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.mypy_cache/
+.pytest_cache/
+
+# Java / Gradle / Android (apps/stage-pocket/android)
+.gradle/
+target/
+*.class
+*.jar
+*.war
+*.ear
 local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
 .cxx/
-*.aab
-*.apk
-output-metadata.json
+captures/
 
-# IntelliJ
-*.iml
+# iOS / Xcode (apps/stage-pocket/ios)
+DerivedData/
+*.xcuserstate
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+Pods/
+Carthage/Build/
+
+# Godot / C# (apps/stage-tamagotchi-kirie, apps/stage-tamagotchi)
+.godot/
+mono_crash.*
+*.dll
+*.so
+*.dylib
+*.exe
+*.out
+*.obj
+*.o
+*.a
+*.lib
+*.exp
+*.ilk
+*.pdb
+*.meta
+*.uid
+*.csproj.user
+*.sln.docstates
+bin/
+obj/
+
+# Logs and Temp Files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.*
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+*.sublime-workspace
+*.sublime-project
+.zed/
 
-# Keystore files
-*.jks
-*.keystore
+# OS Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+# Coverage
+coverage/
+htmlcov/
+.nyc_output/
+.coverage
