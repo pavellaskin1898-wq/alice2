@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Алиса AI — браузерная версия</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <h1>Алиса AI</h1>
+        <p class="subtitle">Подключён только один ИИ: Яндекс Алиса (YandexGPT)</p>
+      </div>
+    </div>
+    <button id="btn-settings" class="icon-btn" title="Настройки">⚙️</button>
+  </header>
+
+  <div class="voice-bar">
+    <button id="btn-mic" class="mic-btn" title="Голосовой ввод (Alt)">🎤</button>
+    <span id="voice-status" class="voice-status">Нажмите 🎤 или клавишу Alt и говорите по-русски</span>
+    <label class="tts-toggle"><input type="checkbox" id="chk-tts" checked> Озвучивать ответы</label>
+  </div>
+
+  <main id="chat" class="chat">
+    <div class="msg bot">
+      <div class="bubble">Привет! Я Алиса 🙋‍♀️ Напиши сообщение или нажмите 🎤 и говорите по-русски. Не забудьте в настройках (⚙️) указать API-ключ и Folder ID из Yandex Cloud.</div>
+    </div>
+  </main>
+
+  <form id="composer" class="composer">
+    <input id="input" type="text" placeholder="Спросите Алису о чём угодно…" autocomplete="off">
+    <button id="btn-send" type="submit">Отправить ➤</button>
+  </form>
+</div>
+
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-card">
+    <h2>Настройки</h2>
+    <label>API-ключ Yandex Cloud
+      <input id="set-api-key" type="password" placeholder="Api-Key…">
+    </label>
+    <label>Folder ID
+      <input id="set-folder-id" type="text" placeholder="b1g…">
+    </label>
+    <label>Модель
+      <select id="set-model">
+        <option value="yandexgpt-lite">yandexgpt-lite (быстрая)</option>
+        <option value="yandexgpt">yandexgpt (умная)</option>
+      </select>
+    </label>
+    <label>Адрес прокси-сервера
+      <input id="set-proxy" type="text" placeholder="/api/v1/gpt/completions">
+    </label>
+    <label>Голос озвучки
+      <select id="set-voice"></select>
+    </label>
+    <div class="modal-actions">
+      <button id="btn-test-voice" class="ghost">🔊 Проверить голос</button>
+      <button id="btn-save" class="primary">Сохранить</button>
+      <button id="btn-close" class="ghost">Закрыть</button>
+    </div>
+    <p class="hint">Ключ хранится только в вашем браузере (localStorage).</p>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
